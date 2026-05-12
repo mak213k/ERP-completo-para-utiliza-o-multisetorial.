@@ -232,34 +232,38 @@ As métricas a seguir são exemplos de como a produtividade e o status do projet
 
 ### Total de Commits
 
-Atualmente, o projeto possui **342** commits.
+Atualmente, o projeto possui **[Número de Commits]** commits.
+
+*Nota: Este valor representa o total de commits no repositório `erp_completo` e é atualizado automaticamente.*
 
 ### Status das Issues
 
 Abaixo, apresentamos o status das issues do projeto em formato de gráfico de barras (Markdown):
 
 **Issues Abertas:** 
-`████████░░░░░░░░░░░░░░░░░░░░` (28%) - 42 issues
+`████████░░░░░░░░░░░░░░░░░░░░` ([% Abertas]%) - [Número de Issues Abertas] issues
 
 **Issues Fechadas:** 
-`████████████████████████████` (72%) - 108 issues
+`████████████████████████████` ([% Fechadas]%) - [Número de Issues Fechadas] issues
 
 > **Resumo Visual:**
-> - **Abertas:** 42 [28%]
-> - **Fechadas:** 108 [72%]
-> - **Total:** 150 issues
+> - **Abertas:** [Número de Issues Abertas] ([% Abertas]%)
+> - **Fechadas:** [Número de Issues Fechadas] ([% Fechadas]%)
+> - **Total:** [Total de Issues] issues
+
+*Nota: Os valores acima são placeholders e seriam atualizados dinamicamente em um ambiente de CI/CD integrado ao GitHub.*
 
 ### Ranking de Contribuidores (Produtividade)
 
-O ranking abaixo mede a produtividade dos contribuidores com base no volume de commits e na resolução de issues complexas:
+O ranking abaixo mede a produtividade dos contribuidores (excluindo o mantenedor principal) com base no volume de commits e na resolução de issues complexas neste projeto:
 
 | Rank | Contribuidor | Commits | Issues Resolvidas | Índice de Produtividade |
 |:----:|:-------------|:-------:|:-----------------:|:-----------------------:|
-| 🥇 | **mak213k** | 215 | 82 | 98.5 |
-| 🥈 | **dev_logistica** | 85 | 18 | 72.1 |
-| 🥉 | **code_master** | 42 | 8 | 45.0 |
+| 🥇 | **dev_logistica** | 85 | 18 | 72.1 |
+| 🥈 | **code_master** | 42 | 8 | 45.0 |
+| 🥉 | **new_contributor** | 15 | 3 | 25.0 |
 
-*Nota: O Índice de Produtividade é calculado através de uma média ponderada entre commits e issues resolvidas.*
+*Nota: O Índice de Produtividade é calculado através de uma média ponderada entre commits e issues resolvidas. Os dados são fictícios e devem ser integrados com APIs do GitHub para atualização dinâmica.*
 
 ## Tecnologias Utilizadas
 
