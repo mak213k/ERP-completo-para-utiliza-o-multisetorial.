@@ -226,44 +226,8 @@ O fluxo logístico consolidado demonstra uma estrutura robusta e detalhada, com 
 *   **Otimização de Rotas Dinâmica (Roteirização):** A etapa de `ROTERIZAÇÃO` é fundamental para a eficiência do transporte. A implementação de sistemas de otimização de rotas dinâmicos, que considerem condições de tráfego em tempo real, capacidade de `VEÍCULO` e novas demandas, pode gerar economias significativas e melhorar o tempo de entrega. A roteirização bem executada é a base para um carregamento eficiente (LIFO - Last In, First Out).
 *   **Gestão de Devoluções (Logística Reversa):** O fluxo ainda não detalha o processo de logística reversa. É importante considerar como os produtos `NOK` da `Conferência Física` ou devoluções de clientes são tratados, para garantir um ciclo completo e eficiente.
 
-## Métricas do Projeto
 
-As métricas a seguir são exemplos de como a produtividade e o status do projeto podem ser monitorados. Para um projeto Open Source real, estas métricas seriam geradas dinamicamente via APIs do GitHub ou ferramentas de CI/CD.
 
-### Total de Commits
-
-Atualmente, o projeto possui **[Número de Commits]** commits.
-
-*Nota: Este valor representa o total de commits no repositório `erp_completo` e é atualizado automaticamente.*
-
-### Status das Issues
-
-Abaixo, apresentamos o status das issues do projeto em formato de gráfico de barras (Markdown):
-
-**Issues Abertas:** 
-`████████░░░░░░░░░░░░░░░░░░░░` ([% Abertas]%) - [Número de Issues Abertas] issues
-
-**Issues Fechadas:** 
-`████████████████████████████` ([% Fechadas]%) - [Número de Issues Fechadas] issues
-
-> **Resumo Visual:**
-> - **Abertas:** [Número de Issues Abertas] ([% Abertas]%)
-> - **Fechadas:** [Número de Issues Fechadas] ([% Fechadas]%)
-> - **Total:** [Total de Issues] issues
-
-*Nota: Os valores acima são placeholders e seriam atualizados dinamicamente em um ambiente de CI/CD integrado ao GitHub.*
-
-### Ranking de Contribuidores (Produtividade)
-
-O ranking abaixo mede a produtividade dos contribuidores (excluindo o mantenedor principal) com base no volume de commits e na resolução de issues complexas neste projeto:
-
-| Rank | Contribuidor | Commits | Issues Resolvidas | Índice de Produtividade |
-|:----:|:-------------|:-------:|:-----------------:|:-----------------------:|
-| 🥇 | **dev_logistica** | 85 | 18 | 72.1 |
-| 🥈 | **code_master** | 42 | 8 | 45.0 |
-| 🥉 | **new_contributor** | 15 | 3 | 25.0 |
-
-*Nota: O Índice de Produtividade é calculado através de uma média ponderada entre commits e issues resolvidas. Os dados são fictícios e devem ser integrados com APIs do GitHub para atualização dinâmica.*
 
 ## Tecnologias Utilizadas
 
