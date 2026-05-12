@@ -257,3 +257,77 @@ Este projeto é distribuído sob a licença **[Nome da Licença]**. Como a licen
 Para dúvidas, sugestões ou colaborações, por favor, abra uma issue no repositório do GitHub ou entre em contato com os mantenedores do projeto.
 
 **GitHub do Projeto:** [https://github.com/mak213k/erp_completo](https://github.com/mak213k/erp_completo)
+
+
+
+
+
+##Pacotes de Entregáveis para Projeto ERP
+com Python/Django
+Este documento descreve os pacotes de entregáveis, organizados como Milestones para
+um projeto de ERP (Enterprise Resource Planning) desenvolvido com Python e o framework
+Django. O objetivo é fornecer uma estrutura clara e modular, facilitando o aprendizado e a
+colaboração de alunos, com foco na lógica de Entrada, Processamento e Saída (EPS) para
+cada funcionalidade.
+Arquitetura Modular do ERP
+O projeto será dividido em módulos principais, cada um representando uma área funcional
+do ERP. Essa abordagem modular permite que os alunos trabalhem em partes específicas
+do sistema, entendendo a interconexão entre elas.
+Módulos Principais:
+. Autenticação e Usuários: Gerenciamento de acesso e perfis de usuários.
+. Produtos e Estoque: Cadastro de produtos e controle de quantidades em estoque.
+. Clientes: Gerenciamento de informações de clientes.
+. Pedidos e Vendas: Criação e acompanhamento de pedidos de venda.
+. Relatórios Básicos: Geração de informações sumarizadas do sistema.
+Milestones (Pacotes de Entregáveis)
+Cada Milestone representa um conjunto de funcionalidades relacionadas que devem ser
+desenvolvidas e entregues. Eles serão mapeados para as Milestones do GitHub, e as tarefas
+detalhadas (Issues) serão criadas dentro de cada uma.
+Milestone : Módulo de Autenticação e Usuários
+• Objetivo: Implementar o sistema de autenticação básico (login, logout, registro) e
+gerenciamento de usuários (criação, edição, listagem) para garantir o acesso seguro ao
+sistema.
+• Conceitos Chave: Modelos de Usuário (Django User ou AbstractUser ), Views de
+Autenticação (baseadas em classes ou funções), Formulários de Autenticação,
+Configuração de URLs, Criação de Templates HTML para as páginas de login/registro.
+• Conexão com Outros Módulos: Este módulo é a base para todos os outros, pois define
+quem pode acessar e o que pode fazer no sistema.
+Milestone : Módulo de Produtos e Estoque
+• Objetivo: Desenvolver as funcionalidades CRUD (Create, Read, Update, Delete) para
+produtos e um sistema básico de controle de estoque.
+• Conceitos Chave: Criação de Modelos Django ( Produto , Estoque ), Formulários para
+cadastro e edição, Views para listar, detalhar, criar, editar e excluir produtos,
+Configuração de URLs específicas para produtos, Templates HTML para exibição e
+interação com os dados de produtos.
+• Conexão com Outros Módulos: Produtos serão utilizados no módulo de Pedidos e
+Vendas. O estoque será atualizado a partir das vendas.
+Milestone : Módulo de Clientes
+• Objetivo: Implementar as funcionalidades CRUD para o gerenciamento de informações
+de clientes.
+• Conceitos Chave: Criação do Modelo Django ( Cliente ), Formulários para cadastro e
+edição, Views para listar, detalhar, criar, editar e excluir clientes, Configuração de URLs,
+Templates HTML para exibição e interação com os dados de clientes.
+• Conexão com Outros Módulos: Clientes serão associados aos Pedidos de Venda.
+Milestone : Módulo de Pedidos e Vendas
+• Objetivo: Permitir a criação de pedidos de venda, associando clientes e produtos, e
+implementando a lógica de atualização do estoque após a venda.
+• Conceitos Chave: Criação de Modelos Django ( Pedido , ItemPedido ), Relacionamentos
+entre Modelos (ForeignKey para Cliente e Produto ), Lógica de Negócio para calcular o
+total do pedido e atualizar o estoque, Formulários para criação de pedidos, Views para
+gerenciar o ciclo de vida do pedido, Templates HTML para exibição dos pedidos e seus
+itens.
+• Conexão com Outros Módulos: Depende dos módulos de Produtos e Clientes. Afeta o
+módulo de Produtos (estoque).
+Milestone : Módulo de Relatórios Básicos
+• Objetivo: Gerar relatórios simples para visualizar dados importantes do ERP, como
+produtos mais vendidos, estoque atual ou vendas por cliente.
+• Conceitos Chave: Consultas complexas no Django ORM (usando annotate , aggregate ),
+Views para processar e apresentar os dados dos relatórios, Templates HTML para
+formatar e exibir os relatórios de forma clara.
+• Conexão com Outros Módulos: Consome dados de todos os módulos anteriores para
+gerar insights.
+Cada um desses Milestones será detalhado em Issues específicas no GitHub, seguindo a
+lógica de Entrada, Processamento e Saída para cada tarefa. Isso garantirá que os alunos
+compreendam o fluxo de dados e a responsabilidade de cada componente do sistema.
+
+
