@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Entrega - Chega já</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        .card { border-radius: 15px; border: none; }
+        .card-header { border-radius: 15px 15px 0 0 !important; font-weight: bold; }
+        .form-label { color: #495057; }
+        .badge-info { background-color: #e7f3ff; color: #007bff; padding: 5px 10px; border-radius: 5px; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4 shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="{% url 'cadastro' %}">Chega já - Logística</a>
+        <div class="navbar-nav">
+            <a class="nav-link" href="{% url 'cadastro' %}">Cadastrar Cliente</a>
+            <a class="nav-link active" href="{% url 'gerar_entrega' %}">Nova Entrega</a>
+            <a class="nav-link" href="{% url 'lista_entregas' %}">Relatório</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white text-center py-3">
+                    <h4 class="mb-0">Emitir Conhecimento de Transporte (CT-e)</h4>
+                </div>
+                <div class="card-body p-4">
+                    <div class="alert alert-light border mb-4">
+                        <small class="text-muted">Os clientes listados abaixo incluem tanto Pessoas Físicas (CPF) quanto Jurídicas (CNPJ) cadastrados anteriormente.</small>
+                    </div>
+
+                    <form method="post">
+                        {% csrf_token %}
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-bold">Remetente <span class="badge-info">Origem</span></label>
+                                {{ form.remetente }}
+                                <div class="form-text">Quem está enviando a carga.</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-bold">Destinatário <span class="badge-info">Destino</span></label>
+                                {{ form.destinatario }}
+                                <div class="form-text">Quem receberá a carga.</div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Descrição da Mercadoria</label>
+                            {{ form.descricao_carga }}
+                            <div class="form-text">Ex: 50 caixas de cerâmica, Peças automotivas, etc.</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-bold">Peso Total (kg)</label>
+                                <div class="input-group">
+                                    {{ form.peso }}
+                                    <span class="input-group-text">kg</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-bold">Valor do Frete (R$)</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">R$</span>
+                                    {{ form.valor_frete }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg shadow-sm">Registrar Entrega</button>
+                            <a href="{% url 'lista_entregas' %}" class="btn btn-light">Ver todas as entregas</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <p class="text-muted">Não encontrou o cliente? 
+                    <a href="{% url 'cadastro' %}" class="btn btn-sm btn-outline-secondary ms-2">Cadastrar Novo</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

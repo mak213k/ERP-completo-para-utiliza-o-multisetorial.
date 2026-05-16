@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Relatório de Entregas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="{% url 'cadastro' %}">Sistema Logístico</a>
+        <div class="navbar-nav">
+            <a class="nav-link" href="{% url 'cadastro' %}">Cadastrar Cliente</a>
+            <a class="nav-link" href="{% url 'gerar_entrega' %}">Nova Entrega</a>
+            <a class="nav-link active" href="{% url 'lista_entregas' %}">Relatório</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="card shadow">
+        <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+            <h4 class="mb-0">Histórico de Entregas</h4>
+            <a href="{% url 'gerar_entrega' %}" class="btn btn-sm btn-success">Nova Entrega</a>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Data/Hora</th>
+                            <th>Remetente</th>
+                            <th>Destinatário</th>
+                            <th>Carga</th>
+                            <th>Peso</th>
+                            <th>Valor Frete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for entrega in entregas %}
+                        <tr>
+                            <td>{{ entrega.data_criacao|date:"d/m/Y H:i" }}</td>
+                            <td>{{ entrega.remetente.nome }}</td>
+                            <td>{{ entrega.destinatario.nome }}</td>
+                            <td>{{ entrega.descricao_carga }}</td>
+                            <td>{{ entrega.peso }} kg</td>
+                            <td class="text-success fw-bold">R$ {{ entrega.valor_frete }}</td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="6" class="text-center text-muted p-4">Nenhuma entrega registrada ainda.</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
